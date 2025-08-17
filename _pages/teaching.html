@@ -7,6 +7,54 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching - Your Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .course {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .course-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .course-details {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+        .course-description {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+   <body>
+
+    <div class="course">
+        <div class="course-title">Data Structures and Algorithms</div>
+        <div class="course-details">Fall, 2025</div>
+        <!--<div class="course-details">Institution</div>
+        <div class="course-description">
+            <p>Briefly describe the course content, your role (e.g., instructor, teaching assistant), and any special projects or highlights. You can use bullet points here for better readability.</p>
+            <ul>
+                <li>Taught key concepts in [Topic 1] and [Topic 2].</li>
+                <li>Developed and graded assignments and exams.</li>
+                <li>Held weekly office hours to assist students.</li>
+            </ul>
+        </div> -->
+    </div>
+
+    </body>
+</html>

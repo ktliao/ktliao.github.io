@@ -5,32 +5,111 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Your Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .publication {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .publication-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .publication-authors {
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+        .publication-journal {
+            color: #777;
+            margin-top: 5px;
+        }
+        .publication-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="publication">
+        <div class="publication-title">Consistent Labeling Across Group Assignments: Variance Reduction in Conditional Average Treatment Effect Estimation</div>
+        <div class="publication-authors">Yi-Fu Fu, Keng-Te Liao, Shou-De Lin</div>
+        <div class="publication-journal">arXiv:2507.04332</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Robustness in Text-Centric Multimodal Alignment with Adversarial Prompting</div>
+        <div class="publication-authors">Yun-Da Tsai, Ting-Yu Yen, Keng-Te Liao, Shou-De Lin</div>
+        <div class="publication-journal">AAAI 2025</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Think or Remember? Detecting and Directing LLMs Towards Memorization or Generalization</div>
+        <div class="publication-authors">Yi-Fu Fu, Yu-Chieh Tu, Tzu-Ling Cheng, Cheng-Yu Lin, Yi-Ting Yang, Heng-Yi Liu, Keng-Te Liao, Da-Cheng Juan, Shou-De Lin</div>
+        <div class="publication-journal">arXiv:2412.18497</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Self-supervised Multimodal Representation Learning for Product Identification and Retrieval</div>
+        <div class="publication-authors">Yi-Quan Jiang, Keng-Te Liao, Shou-De Lin, Hong-Ming Qiao, Ke-Feng Yu, Cheng-Wei Yang, Yin-Qi Chen</div>
+        <div class="publication-journal">ICONIP 2023</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Bayesian Mixture Variational Autoencoders for Multi-Modal Learning</div>
+        <div class="publication-authors">Keng-Te Liao, Bo-Wei Huang, Chih-Chun Yang, Shou-De Lin</div>
+        <div class="publication-journal">Machine Learning, 111(12): 4329-4357 (2022)</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Environment Diversification with Multi-head Neural Network for Invariant Learning</div>
+        <div class="publication-authors">Bo-Wei Huang, Keng-Te Liao, Chang-Sheng Kao, Shou-De Lin</div>
+        <div class="publication-journal">NeurIPS 2022</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Explainable and Sparse Representations of Academic Articles for Knowledge Exploration</div>
+        <div class="publication-authors">Keng-Te Liao, Zhi-hong Shen, Chi-yuan Huang, Chieh-Han Wu, Po-Chun Chen, Kuan-san Wang, Shou-De Lin</div>
+        <div class="publication-journal">COLING 2020</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Explaining Word Embeddings via Disentangled Representation</div>
+        <div class="publication-authors">Keng-Te Liao, Cheng-Syuan Lee, Zhong-Yu Huang, Shou-De Lin</div>
+        <div class="publication-journal">IJCNLP/AACL 2020</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">Word Relation Autoencoder for Unseen Hypernym Extraction Using Word Embeddings</div>
+        <div class="publication-authors">Hong-You Chen, Cheng-Syuan Lee, Keng-Te Liao, Shou-De Lin</div>
+        <div class="publication-journal">EMNLP 2018</div>
+    </div>
+
+    <div class="publication">
+        <div class="publication-title">A Cross-Domain Recommender System Based on Common-Sense Knowledge Bases</div>
+        <div class="publication-authors">Yi-Ting Tsai, Chih-Shiang Wu, Hsiang-Ling Hsu, Tenniel Liu, Pei-Lin Chen, Wen-Hao Chen, Keng-Te Liao</div>
+        <div class="publication-journal">TAAI 2017</div>
+    </div>
+
+    </body>
+</html>
 
